@@ -64,6 +64,7 @@ public class UserController {
    */
   @PostMapping("/users")
   public User createUser(@Valid @RequestBody User user) {
+	  userService.saveUser(user);
     return user;
   }
 
